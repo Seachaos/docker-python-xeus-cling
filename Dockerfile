@@ -54,12 +54,12 @@ RUN cd cxxopts && mkdir build && cd build && cmake ../ && make -j4 && make insta
 RUN git clone https://github.com/Seachaos/llvm-with-cling.git --depth 1
 RUN cd llvm-with-cling && mkdir build && cd build \
     cmake \
-        -DLLVM_BUILD_TOOLS=Off \
+        -DLLVM_BUILD_TOOLS=On \
         -DCMAKE_BUILD_TYPE=Release \
         -DCLING_CXX_HEADERS=ON \
         -DCLING_INCLUDE_TESTS=ON \
         ../ && \
-    make -j8
+    make -j8 && make install
 
 # install xeus-cling
 WORKDIR /root/source
