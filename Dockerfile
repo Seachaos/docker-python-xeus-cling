@@ -35,7 +35,7 @@ RUN cd cppzmq && mkdir build && cd build && cmake ../ && make -j4 && make instal
 # install xeus
 RUN git clone -b 0.23.3 https://github.com/jupyter-xeus/xeus.git --depth 1
 RUN cd xeus && mkdir build && cd build && \
-    cmake -D ../ && make -j4 && make install
+    cmake -D CMAKE_BUILD_TYPE=Release ../ && make -j4 && make install
 
 
 RUN git clone -b v1.8.1 https://github.com/zeux/pugixml.git --depth 1
@@ -50,11 +50,11 @@ RUN cd pugixml && mkdir build && cd build && \
 RUN git clone -b v2.1.1 https://github.com/jarro2783/cxxopts --depth 1
 RUN cd cxxopts && mkdir build && cd build && cmake ../ && make -j4 && make install
 
-# install cling
+# install llvm & cling
 RUN git clone https://github.com/Seachaos/llvm-with-cling.git --depth 1
 RUN cd llvm-with-cling && mkdir build && cd build \
     cmake \
-        -DLLVM_BUILD_TOOLS=On \
+        -DLLVM_BUILD_TOOLS=Off \
         -DCMAKE_BUILD_TYPE=Release \
         -DCLING_CXX_HEADERS=ON \
         -DCLING_INCLUDE_TESTS=ON \
