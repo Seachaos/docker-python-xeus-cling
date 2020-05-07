@@ -7,13 +7,13 @@ RUN mkdir /root/source
 WORKDIR /root/source
 
 # install dependency
-ADD ./build_dependency_1.sh /root/srouce/build_dependency_1.sh
+ADD ./build_dependency_1.sh /root/source/build_dependency_1.sh
 RUN chmod +x ./build_dependency_1.sh && ./build_dependency_1.sh
 
 # install llvm & cling & xeus-cling
-ADD ./build_cling_with_llvm.sh /root/srouce/build_cling_with_llvm.sh
+ADD ./build_cling_with_llvm.sh /root/source/build_cling_with_llvm.sh
 RUN chmod +x ./build_cling_with_llvm.sh && ./build_cling_with_llvm.sh
 
 # install xeus-cling
-ADD ./build_dependency_2.sh /root/srouce/build_dependency_2.sh
+ADD ./build_dependency_2.sh /root/source/build_dependency_2.sh
 RUN chmod +x ./build_dependency_2.sh && ./build_dependency_2.sh
