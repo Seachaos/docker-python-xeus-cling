@@ -41,11 +41,12 @@ export NOTEBOOK_FOLDER=$HOME/docker_jupyter/notebook
 
 
 # Build image road map :
-build 1: python-3.7.0-basic ( dependency install )  
-build 2: python-3.7.0-xeus-cling ( cling + xeus + llvm )  
-build 3: python-3.7.0-jupyter-basic-cpp ( xcpp with juypter )  
-build 4: python-3.7.0-opencv ( install opencv )  
-build 5: python-3.7.0-jupyter ( other libraries  )  
+build :  1  | python-3.7.0-basic                     | dependency install  
+build :  2  | python-3.7.0-xeus-cling                | cling + xeus + llvm  
+build :  3  | python-3.7.0-jupyter-basic-cpp         | xcpp with juypter  
+build : 3.5 | python-3.7.0-jupyter-basic-cpp-flatten | in step 3 do a flattern to reduce image size  
+build :  4  | python-3.7.0-opencv                    | install opencv    
+build :  5  | python-3.7.0-jupyter                   | other libraries 
 
 # Reference :  
 
