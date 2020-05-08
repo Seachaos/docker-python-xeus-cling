@@ -1,4 +1,4 @@
-export IMAGE_NAME=seachaos/python-xeus-cling:python-3.7.0-jupyter-basic-cpp
+export IMAGE_NAME=seachaos/python-xeus-cling:python-3.7.0-opencv
 
 export LOCAL_PORT=8888
 
