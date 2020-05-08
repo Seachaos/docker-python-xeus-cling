@@ -1,0 +1,1 @@
+docker build . -t seachaos/python-xeus-cling:python-3.7.0-jupyter-basic-cpp

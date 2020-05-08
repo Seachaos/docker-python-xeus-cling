@@ -5,4 +5,5 @@ cd xeus-cling && mkdir build && cd build && \
         -DCMAKE_BUILD_TYPE=Release \
         -DDOWNLOAD_GTEST=ON \
         ../ && \
-    make -j8 && make install
+    make -j8
+make install
