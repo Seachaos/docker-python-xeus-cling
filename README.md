@@ -3,7 +3,7 @@ Docker build base on python image and include xeus-cling
 and you can use OpenCV C++ with this project : )  
 ( still on working )
 
-# How to use :
+# Installation:
 1. Install docker.  
 2. Setup Jupyter password ( option )
 ```
@@ -21,6 +21,19 @@ http://localhost:8888/
 ```
 
 5. Stop server:  just press ctrl + c and y 
+
+# Usage
+In your Jupyter notebook should can be use like this :
+```c++
+#include <jupyter/opencv>
+using namespace cv;
+Mat img = imread("./test.jpg");
+imshow("cool", img);
+```
+
+example :
+![demo image](https://github.com/Seachaos/opencv-cpp-for-xeus-cling/blob/master/notebook/demo.png)
+
 
 # Custom Setting
 Your notebook and password data is store on your home folder:  ~/docker_jupyter.  
@@ -46,7 +59,7 @@ build :  2  | python-3.7.0-xeus-cling                | cling + xeus + llvm
 build :  3  | python-3.7.0-jupyter-basic-cpp         | xcpp with juypter  
 build : 3.5 | python-3.7.0-jupyter-basic-cpp-flatten | in step 3 do a flattern to reduce image size  
 build :  4  | python-3.7.0-opencv                    | install opencv    
-build :  5  | python-3.7.0-jupyter                   | other libraries 
+build :  5  | python-3.7.0-jupyter            | other libraries 
 
 # Reference :  
 
