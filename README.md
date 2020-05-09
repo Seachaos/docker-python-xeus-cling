@@ -1,7 +1,7 @@
 # Docker-Jupyter-Xeus-Cling-OpenCV
 Docker build base on python image and include xeus-cling  
 and you can use OpenCV C++ with this project : )  
-( still on working )
+
 
 # Installation:
 1. Install docker.  
